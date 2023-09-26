@@ -22,7 +22,7 @@ export default function buildWebpackConfig(options: BuildOptions): webpack.Confi
     module: {
       rules: buildLoaders(options),
     },
-    resolve: buildResolves(),
+    resolve: buildResolves(paths),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
   }
