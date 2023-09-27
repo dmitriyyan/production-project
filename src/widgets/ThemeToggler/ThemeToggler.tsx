@@ -13,7 +13,7 @@ const ThemeToggler = ({ className }: ThemeTogglerProps) => {
 
   return (
     <Button theme="clear" className={classNames('', {}, [className])} onClick={toggleTheme}>
-      {theme === THEME.LIGHT ? <LightIcon /> : <DarkIcon/> }
+      {theme === THEME.LIGHT ? <LightIcon /> : <DarkIcon /> }
     </Button>
   );
 };
