@@ -18,11 +18,11 @@ export default function buildWebpackConfig(options: BuildOptions): webpack.Confi
       path: paths.build,
       clean: true,
     },
-    plugins: buildPlugins(paths),
+    plugins: buildPlugins(options),
     module: {
       rules: buildLoaders(options),
     },
-    resolve: buildResolves(paths),
+    resolve: buildResolves(options),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
   }

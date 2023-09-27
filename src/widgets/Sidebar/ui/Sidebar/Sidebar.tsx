@@ -1,6 +1,8 @@
 import { useState } from 'react'
 
 import { classNames } from 'shared/lib/classNames'
+import { Button } from 'shared/ui/Button';
+import LangToggler from 'shared/ui/LangToggler/LangToggler';
 import { ThemeToggler } from 'shared/ui/ThemeToggler';
 import classes from './Sidebar.module.scss';
 
@@ -17,9 +19,10 @@ const Sidebar = ({ className }: SidebarProps) => {
 
   return (
     <div className={classNames(classes.sidebar, {[classes.collapsed]: isCollapsed}, [className])}>
-      <button onClick={toggleSidebar}>toggle</button>
+      <Button onClick={toggleSidebar}>toggle</Button>
       <div className={classes.switchers}>
-        <ThemeToggler/>
+        <ThemeToggler />
+        <LangToggler className={classes.lang} />
       </div>
     </div>
   )
