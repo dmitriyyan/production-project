@@ -1,8 +1,9 @@
 import { type PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { PageLoader } from 'widgets/PageLoader';
 
-const RouterProvider = ({ children }: PropsWithChildren<unknown>) => {
+type RouterProviderProps = PropsWithChildren<unknown>;
+
+const RouterProvider = ({ children }: RouterProviderProps) => {
   return (
     <BrowserRouter>
       {children}

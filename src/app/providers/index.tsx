@@ -1,14 +1,19 @@
 import { type PropsWithChildren } from 'react';
+import { ErrorBoundary } from './errorBoundary';
 
 import { RouterProvider } from './router';
 import { ThemeProvider } from './theme';
 
-export const Providers = ({ children }: PropsWithChildren<unknown>) => {
+type ProvidersProps = PropsWithChildren<unknown>;
+
+export const Providers = ({ children } : ProvidersProps)  => {
   return (
-    <ThemeProvider>
-      <RouterProvider>
-        {children}
-      </RouterProvider>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <RouterProvider>
+          {children}
+        </RouterProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 };

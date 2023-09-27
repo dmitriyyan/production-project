@@ -3,7 +3,7 @@ import { type ButtonHTMLAttributes, type PropsWithChildren } from 'react';
 import { classNames } from 'shared/lib/classNames';
 import classes from './Button.module.scss';
 
-type ThemeButton = 'clear'
+type ThemeButton = 'clear' | 'regular'
 
 type ButtonProps = PropsWithChildren<{
   className?: string

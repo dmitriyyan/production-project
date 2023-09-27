@@ -8,7 +8,9 @@ import { ThemeToggler } from 'widgets/ThemeToggler';
 import { classNames } from 'shared/lib/classNames';
 import classes from './Layout.module.scss';
 
-const Layout = ({ children }: PropsWithChildren<unknown>) => {
+type LayoutProps = PropsWithChildren<unknown>;
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={classNames(classes.layout)}>
       <Sidebar>

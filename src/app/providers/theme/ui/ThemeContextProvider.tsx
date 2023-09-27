@@ -12,7 +12,9 @@ function getDefaultTheme () {
   return THEME.LIGHT;
 }
 
-const ThemeContextProvider = ({ children }: PropsWithChildren<unknown>) => {
+type ThemeContextProviderProps = PropsWithChildren<unknown>;
+
+const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
   const [theme, setTheme] = useState<THEME>(getDefaultTheme);
 
   const toggleTheme = useCallback(() => {
