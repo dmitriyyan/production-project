@@ -1,12 +1,11 @@
-import { type PropsWithChildren, Suspense } from 'react';
+import { type PropsWithChildren } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { PageLoader } from 'widgets/PageLoader';
 
 const RouterProvider = ({ children }: PropsWithChildren<unknown>) => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        {children}
-      </Suspense>
+      {children}
     </BrowserRouter>
   );
 };

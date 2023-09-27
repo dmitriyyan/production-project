@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+}
+
+.pageWrapper {
+  flex-grow: 1;
+  padding: var(--page-content-padding);
+}
+
+.langTogglerLoader {
+  background: var(--bg-color);
+}

@@ -1,0 +1,1 @@
+export { NotFoundPagyLazy as NotFoundPage } from './ui/NotFoundPage.lazy';
