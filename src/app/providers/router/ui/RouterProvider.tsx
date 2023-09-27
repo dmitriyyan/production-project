@@ -1,14 +1,14 @@
-import { PropsWithChildren, Suspense } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { type PropsWithChildren, Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-const RouterProvider = ({children}: PropsWithChildren<{}>) => {
+const RouterProvider = ({ children }: PropsWithChildren<unknown>) => {
   return (
-  <BrowserRouter>
+    <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
-          {children}
-        </Suspense>
+        {children}
+      </Suspense>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default RouterProvider
+export default RouterProvider;

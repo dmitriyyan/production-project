@@ -5,11 +5,11 @@ export enum THEME {
   DARK = 'dark',
 }
 
-type ThemeContextProps = {
-  theme?: THEME,
-  toggleTheme: () => void;
+interface ThemeContextProps {
+  theme?: THEME
+  toggleTheme: () => void
 }
 
-export const ThemeContext = createContext<ThemeContextProps>({ theme: THEME.LIGHT, toggleTheme: () => {} });
+export const ThemeContext = createContext<ThemeContextProps>({ theme: THEME.LIGHT, toggleTheme: () => undefined });
 
 export const LOCAL_STORAGE_THEME_KEY = 'theme';

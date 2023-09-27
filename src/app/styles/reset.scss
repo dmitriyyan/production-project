@@ -7,8 +7,6 @@
 
 /* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
 
@@ -27,8 +25,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -60,7 +58,7 @@ h4 {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  color: currentColor;
+  color: currentcolor;
 }
 
 /* Make images easier to work with */

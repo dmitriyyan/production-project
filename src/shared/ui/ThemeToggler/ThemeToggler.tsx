@@ -4,18 +4,18 @@ import { Button } from 'shared/ui/Button';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 
-type ThemeTogglerProps = {
-  className?: string;
+interface ThemeTogglerProps {
+  className?: string
 }
 
-const ThemeToggler = ({className}: ThemeTogglerProps) => {
+const ThemeToggler = ({ className }: ThemeTogglerProps) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <Button theme="clear" className={classNames('', {}, [className])} onClick={toggleTheme}>
       {theme === THEME.LIGHT ? <LightIcon /> : <DarkIcon/> }
     </Button>
-  )
-}
+  );
+};
 
-export default ThemeToggler
+export default ThemeToggler;

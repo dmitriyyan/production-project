@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ABOUT_PATH, MAIN_PATH } from 'shared/config/routeConfig';
 import { AboutPage } from './about';
@@ -12,8 +12,8 @@ const pages = [
   {
     path: ABOUT_PATH,
     element: <AboutPage/>
-  },
-]
+  }
+];
 
 export const Routing = () => {
   return (
@@ -25,4 +25,4 @@ export const Routing = () => {
       </Routes>
     </Suspense>
   );
-}
+};
