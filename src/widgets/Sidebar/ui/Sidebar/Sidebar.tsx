@@ -22,7 +22,7 @@ const Sidebar = ({ className }: SidebarProps) => {
       <Button onClick={toggleSidebar}>toggle</Button>
       <div className={classes.switchers}>
         <ThemeToggler />
-        <LangToggler className={classes.lang} />
+        <LangToggler />
       </div>
     </div>
   )
