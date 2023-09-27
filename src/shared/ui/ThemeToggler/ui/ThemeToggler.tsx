@@ -1,8 +1,8 @@
 import { useTheme, THEME } from 'app/providers/theme';
 import { classNames } from 'shared/lib/classNames';
+import Button from 'shared/ui/Button/Button';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
-import Button from 'shared/ui/Button/Button';
 
 type ThemeTogglerProps = {
   className?: string;
